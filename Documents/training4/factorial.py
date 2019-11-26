@@ -1,19 +1,28 @@
 import math
 
-factorial = 1
-
-num = int(input("please enter number you require factorial of: "))
-
-if num < 0:
-      print("sorry you can't use that number")
-
-elif num == 0:
-      print ("the factorise of 0 is 1")
-else:
-      for i in range (1,num + 1):
-            factorial = factorial *i
-      print ("The factorial of" ,num, "is", factorial)
-      
+def factorial(number):
+    count = number
+    if number == 0:
+        return number
+    else:
+        for i in range(1,count):
+            print ("i is: " ,i)
+            number *= i
+            print (number)
+        return number
+def reverse_factorial(number):
+    count = number
+    if number ==0:
+        return number
+    else:
+        while number > 1:
+            for i in range(1,(count+1)):
+                print ("i is: ", i)
+                number /=i
+                if number ==1:
+                    return i
+        return "None"
+            
 
 
 
